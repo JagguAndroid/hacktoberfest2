@@ -1,0 +1,49 @@
+import java.util.ArrayList; // Import the ArrayList class
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        // 1. Create an ArrayList of Strings
+        ArrayList<String> fruits = new ArrayList<>();
+
+        // 2. Add elements to the ArrayList
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+        fruits.add("Mango");
+
+        System.out.println("Original ArrayList: " + fruits);
+
+        // 3. Access elements using their index
+        System.out.println("Fruit at index 0: " + fruits.get(0));
+
+        // 4. Modify an element
+        fruits.set(1, "Grapes");
+        System.out.println("ArrayList after modifying index 1: " + fruits);
+
+        // 5. Remove an element by index
+        fruits.remove(3); // Removes "Mango"
+        System.out.println("ArrayList after removing element at index 3: " + fruits);
+
+        // 6. Remove an element by value
+        fruits.remove("Apple");
+        System.out.println("ArrayList after removing 'Apple': " + fruits);
+
+        // 7. Get the size of the ArrayList
+        System.out.println("Size of ArrayList: " + fruits.size());
+
+        // 8. Check if an element exists
+        System.out.println("Does ArrayList contain 'Orange'? " + fruits.contains("Orange"));
+        System.out.println("Does ArrayList contain 'Kiwi'? " + fruits.contains("Kiwi"));
+
+        // 9. Iterate through the ArrayList using a for-each loop
+        System.out.println("Iterating through ArrayList:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+
+        // 10. Clear all elements from the ArrayList
+        fruits.clear();
+        System.out.println("ArrayList after clearing: " + fruits);
+        System.out.println("Is ArrayList empty? " + fruits.isEmpty());
+    }
+}
